@@ -4,15 +4,15 @@ import useCurrencyinfo from "./customHook/hook";
 function App() {
 
   const [amount,setamount]=useState(0)
-  const [From,setFrom]=useState("usd")
-  const [To,setTo]=useState("inr")
+  const [From,setFrom]=useState("inr")
+  const [To,setTo]=useState("usd")
   const [convertedamount,setconvertedamount]=useState(0)
 
 
   const currencyinfo=useCurrencyinfo(From)
   const options=Object.keys(currencyinfo)
 
-  const swap=()=>{
+  const swap=()=>{     /* functino to swap values */
     setFrom(To)
     setTo(From)
     setconvertedamount(amount)
@@ -25,14 +25,14 @@ function App() {
     <>
       <div
         className="  h-screen w-screen bg-cover bg-no-repeat lazy flex justify-center items-center"
-        style={{ backgroundImage: `url("../src/assets/currencymap.jpg")` }}
+        style={{ backgroundImage: `url("../src/assets/currencymap.jpg")`}}
       >
         <div className="h-2/4 w-2/4 bg-black opacity-80 flex flex-col justify-center rounded-xl">
           <h1 className="text-white text-4xl w-full text-center relative bottom-6">Currency Convertor</h1>
           <Extend where="From"
                 Amount={amount}
                 currencyoptions={options}
-                onCurrencychange={(currency)=>setamount(currency)}
+                onCurrencychange={(currency)=>setFrom(currency)}
                 selectcurrency={From}
                 onAmountchange={(amount)=>setamount(amount)}
           />

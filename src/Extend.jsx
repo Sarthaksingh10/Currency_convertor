@@ -1,10 +1,10 @@
 import propTypes from "prop-types";
 import { useId } from "react";
 
-function Extend({
-  where = "from",
-  Amount,
-  onAmountchange,
+function Extend({     /* Creating a component  */
+  where = "from",     /* Heading from and to */
+  Amount,             /* Amount to be converted */
+  onAmountchange,     
   onCurrencychange,
   currencyoptions = [],
   selectcurrency = "inr",
