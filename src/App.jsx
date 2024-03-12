@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Extend from "./Extend";
 import useCurrencyinfo from "./customHook/hook";
+import  './App.css'
 function App() {
 
   const [amount,setamount]=useState(0)
@@ -25,7 +26,7 @@ function App() {
     <>
       <div
         className="  h-screen w-screen bg-cover bg-no-repeat lazy flex justify-center items-center"
-        style={{ backgroundImage: `url("../src/assets/currencymap.jpg")`}}
+       id="Maindiv"
       >
         <div className="h-2/4 w-2/4 bg-black opacity-80 flex flex-col justify-center rounded-xl">
           <h1 className="text-white text-4xl w-full text-center relative bottom-6">Currency Convertor</h1>
