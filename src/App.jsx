@@ -12,7 +12,7 @@ function App() {
   const currencyinfo=useCurrencyinfo(From)
   const options=Object.keys(currencyinfo)
 
-  const swap=()=>{     /* functino to swap values */
+  const swap=()=>{     /* function to swap values */
     setFrom(To)
     setTo(From)
     setconvertedamount(amount)
